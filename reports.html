@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reports</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Reports</h1>
+    <h2>Top Donors</h2>
+    {% if top_donors %}
+        <ul>
+        {% for donor in top_donors %}
+            <li>{{ donor[0] }} → {{ donor[1] }} donations</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No donors yet.</p>
+    {% endif %}
+
+    <h2>Most Requested Food Items</h2>
+    {% if top_food %}
+        <ul>
+        {% for food in top_food %}
+            <li>{{ food[0] }} → {{ food[1] }} requests</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No requests yet.</p>
+    {% endif %}
+
+    <br>
+    <a href="/">Back to Home</a>
+</body>
+</html>

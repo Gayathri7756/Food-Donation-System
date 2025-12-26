@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Request</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Add Request</h1>
+    <form action="/add_request" method="post">
+        <label>NGO User ID:</label><br>
+        <input type="number" name="user_id" required><br>
+        <label>Food Item:</label><br>
+        <input type="text" name="food_item" required><br>
+        <label>Quantity:</label><br>
+        <input type="number" name="quantity" required><br>
+        <label>Urgency:</label><br>
+        <select name="urgency">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select><br><br>
+        <input type="submit" value="Add Request">
+    </form>
+    <br>
+    <a href="/">Back to Home</a>
+</body>
+</html>

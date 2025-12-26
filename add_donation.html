@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Donation</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Add Donation</h1>
+    <form action="/add_donation" method="post">
+        <label>Donor User ID:</label><br>
+        <input type="number" name="user_id" required><br>
+        <label>Food Item:</label><br>
+        <input type="text" name="food_item" required><br>
+        <label>Quantity:</label><br>
+        <input type="number" name="quantity" required><br>
+        <label>Expiry Date (YYYY-MM-DD):</label><br>
+        <input type="date" name="expiry_date" required><br><br>
+        <input type="submit" value="Add Donation">
+    </form>
+    <br>
+    <a href="/">Back to Home</a>
+</body>
+</html>

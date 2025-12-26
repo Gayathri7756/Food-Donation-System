@@ -29,7 +29,3 @@ pip install -r requirements.txt
 4. Run the app:
 python app.py
 Open http://127.0.0.1:5000 in a browser.
-
-## Notes
-- Avoid uploading sensitive files (like passwords).  
-- Includes only essential project files for clarity.
